@@ -90,6 +90,7 @@ public class App {
 		Map<NombreFacultad, List<Estudiante>> ejercicio2 = listaFacultades.stream()
 				.collect(Collectors.toMap(Facultad::getNombreFacultad, Facultad::getListaEstudiantes));
 		System.out.println(ejercicio2);
+		
 	// ===========================================================================================================
 		
 	System.out.println("\n3. Recorrer la lista de facultades y obtener una nueva colección que agrupe\r\n"
@@ -108,6 +109,9 @@ public class App {
 				+ "estudiantes de cada facultad ordenada por el total de asignaturas, según el\r\n"
 				+ "orden natural.\r\n"
 				+ "\n");
+		// los enteros como es el caso de el total de asignaturas ya se ordenan naturalmente
+		// (no hace falta implementar la comparación en la clase Estudiante).
+		
 		listaEstudiantes.stream().sorted(Comparator.comparing(Estudiante::getTotalAsignaturasMatriculadas))
 			.collect(Collectors.groupingBy(Estudiante::getNombreFacultad)).forEach((facultad, listaestudiantes) ->
 			System.out.println("Facultad: "+ facultad + "\n" + listaestudiantes));
@@ -119,7 +123,9 @@ public class App {
 						+ "del profesor, según el orden natural.\r\n"
 						+ "\n");
 				
-			// ---  Map<NombreFacultad, Map<Dpto, List<Profesor>>> -----
+			// --- ESTRUCTURA: Map<NombreFacultad, Map<Dpto, List<Profesor>>> -----
+				
+			// -------------- implementada la Interfaz Comparable en la clase Profesor ------------
 		ejercicio3.forEach((facultad, mapaAnidado) -> {
 				
 				System.out.println("Facultad: " + facultad);

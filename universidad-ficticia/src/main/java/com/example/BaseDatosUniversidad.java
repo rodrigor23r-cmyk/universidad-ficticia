@@ -169,7 +169,7 @@ public class BaseDatosUniversidad {
 		        .totalEstudiantes(0)
 		        .dpto(Dpto.INVESTIGACION)
 		        .fechaIncioFacultad(LocalDate.of(2005, Month.SEPTEMBER, 1))
-		        .salario(BigDecimal.valueOf(3800.50))
+		        .salario(BigDecimal.valueOf(3500.40))
 		        .build();
 
 		Profesor profesor3 = Profesor.builder()
@@ -216,7 +216,8 @@ public class BaseDatosUniversidad {
 			    .salario(BigDecimal.valueOf(3500.20))
 	   		    .build();
 		
-		List<Profesor> profesores = List.of(profesor1, profesor2, profesor3, profesor4, profesor5);
+		List<Profesor> profesores = List.of(profesor1, profesor2, profesor3, profesor4, profesor5); 
+		//,profesor6); ---------- añadir un profesor duplicado para que salte error 
 		
 		return profesores;
 	}
