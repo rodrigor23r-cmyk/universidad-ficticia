@@ -29,4 +29,19 @@ public class Estudiante extends Persona {
 	
 	private LocalDate fechaAltaFacultad;
 
+	
+	
+	
+	public String toString() {
+	    return String.format(
+	        "  Estudiante: %s %s %s" +
+	        "  Nacimiento: %s" +
+	        "  Facultad: %s" +
+	        "  Asignaturas: %s" +
+	        "  Fecha de Alta: %s\n", 
+	        super.getNombre(), super.getPrimerApellido(), super.getSegundoApellido(),
+	        super.getFechaDeNacimiento(), this.getNombreFacultad(),
+	        this.getTotalAsignaturasMatriculadas(), this.getFechaAltaFacultad()
+	    );
+	}
 }

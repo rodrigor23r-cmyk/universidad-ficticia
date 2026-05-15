@@ -24,20 +24,13 @@ public class Facultad {
 	private List<Estudiante> listaEstudiantes;
 
 
-	/*public String toString() {
-	    return String.format(
-	        "\n================ FACULTAD ================\n" +
-	        "  Nombre completo: %s \n" +
-	        "  Nacimiento     : %s\n" +
-	        "  Género         : %s\n" +
-	        "---------------------------------------------------\n" +
-	        "  Departamento   : %s\n" +
-	        "  Fecha de Alta  : %s\n" +
-	        "  Salario        : %.2f €\n" + 
-	        "===================================================\n",
-	        super.getNombre(), super.getPrimerApellido(), super.getSegundoApellido(), // Atributos de Persona
-	        super.getFechaNacimiento(), super.getGenero(),
-	        this.getDpto(), this.getFechaAlta(), this.getSalario()                    // Atributos de Empleado
-	    );
-	}*/
+	public String toString() {
+    return String.format(
+        "\n================ FACULTAD de %s ================\n" +
+        "  %s\n" +
+        "  %s\n" +
+        "===================================================\n",
+        this.getNombreFacultad(), this.getListaProfesores(), this.getListaEstudiantes()
+    );
+}
 }

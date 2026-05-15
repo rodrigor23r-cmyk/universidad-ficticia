@@ -114,7 +114,7 @@ public class BaseDatosUniversidad {
 		        .segundoApellido("Jiménez")
 		        .fechaDeNacimiento(LocalDate.of(2001, Month.DECEMBER, 12))
 		        .nombreFacultad(NombreFacultad.INFORMATICA)
-		        .totalAsignaturasMatriculadas(6)
+		        .totalAsignaturasMatriculadas(5)
 		        .fechaAltaFacultad(LocalDate.of(2020, Month.SEPTEMBER, 1))
 		        .build();
 
@@ -158,7 +158,7 @@ public class BaseDatosUniversidad {
    		    .totalEstudiantes(0)
    		    .dpto(Dpto.DOCENCIA)
 		    .fechaIncioFacultad(LocalDate.of(1999, Month.APRIL, 1))
-		    .salario(BigDecimal.valueOf(3500.20))
+		    .salario(BigDecimal.valueOf(2700.20))
    		    .build();
 		
 		Profesor profesor2 = Profesor.builder()
@@ -201,11 +201,20 @@ public class BaseDatosUniversidad {
 		        .fechaDeNacimiento(LocalDate.of(1988, Month.DECEMBER, 12))
 		        .totalEstudiantes(0)
 		        .dpto(Dpto.DOCENCIA)
-		        .fechaIncioFacultad(LocalDate.of(2018, Month.SEPTEMBER, 1))
-		        .salario(BigDecimal.valueOf(2900.40))
+		        .fechaIncioFacultad(LocalDate.of(2026, Month.MAY, 28))
+		        .salario(BigDecimal.valueOf(3500.40))
 		        .build();
 
-		
+		Profesor profesor6 = Profesor.builder()
+	   		    .nombre("Ramiro")
+	   		    .primerApellido("López")
+	   		    .segundoApellido("Fernández")
+	   		    .fechaDeNacimiento(LocalDate.of(1966, Month.OCTOBER, 15))
+	   		    .totalEstudiantes(0)
+	   		    .dpto(Dpto.DOCENCIA)
+			    .fechaIncioFacultad(LocalDate.of(1999, Month.APRIL, 1))
+			    .salario(BigDecimal.valueOf(3500.20))
+	   		    .build();
 		
 		List<Profesor> profesores = List.of(profesor1, profesor2, profesor3, profesor4, profesor5);
 		
